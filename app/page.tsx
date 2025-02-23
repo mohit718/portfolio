@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 md:gap-2 xl:gap-8">
           <div>
             <h6 className="mb-1 text-xl">
-              Hello <span className="text-primary-600">I'm</span>
+              Hello <span className="text-primary-600">I&apos;m</span>
             </h6>
             <h1 className="animation-gradient mb-1 bg-clip-text font-monoton text-6xl text-[transparent] md:text-8xl lg:text-6xl">
               Mohit Soni
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div>
             <h6 className="mb-2 text-lg font-semibold">OR REACH OUT</h6>
-            <div className="group mb-2 flex items-center lg:justify-start justify-center gap-4 text-center lg:text-left">
+            <div className="group mb-2 flex items-center justify-center gap-4 text-center lg:justify-start lg:text-left">
               <div className="rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
                 {SVGS.email({ width: "40px", height: "40px" })}
               </div>
@@ -60,7 +60,7 @@ export default function Home() {
                 mohit18.official@gmail.com
               </p>
             </div>
-            <div className="group mb-2 flex items-center lg:justify-start justify-center gap-4">
+            <div className="group mb-2 flex items-center justify-center gap-4 lg:justify-start">
               <div className="rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
                 {SVGS.telephone({ width: "40px", height: "40px" })}
               </div>
@@ -123,8 +123,8 @@ export default function Home() {
         <section id="work" className="w-full px-4 lg:px-16">
           <h2 className="my-4 mb-6 text-4xl font-bold">Projects</h2>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard project={project} />
+            {projects.map((project, k) => (
+              <ProjectCard project={project} key={k} />
             ))}
           </div>
         </section>

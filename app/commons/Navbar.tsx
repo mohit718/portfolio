@@ -1,29 +1,25 @@
 "use client";
+// import Lottie from "lottie-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useEffect, useRef } from "react";
 import useNavbar from "./useNavbar";
-import hamburger from "@/app/assets/images/hamburger.svg";
-import hamburgerAnimation from "@/app/assets/animations/hamburger-menu.json";
-import Image from "next/image";
 import { SVGS } from "./SVGS";
-import Lottie, { LottieRefCurrentProps } from "lottie-react";
 
 export const Navbar = () => {
-  const { links, activeSection, open, setOpen, lottieRef } = useNavbar();
+  const { links, activeSection, open, setOpen } = useNavbar();
 
   return (
     <nav
       className={`${
         open ? "bg-primary-500 backdrop-blur-md" : ""
-      } fixed right-0 top-0 z-50 flex h-fit w-full md:w-64 flex-col items-end gap-5 rounded-lg bg-opacity-15 p-2`}
+      } fixed right-0 top-0 z-50 flex h-fit w-full flex-col items-end gap-5 rounded-lg bg-opacity-15 p-2 md:w-64`}
     >
-      <div className="m-2" onClick={() => setOpen(!open)}>
-        <Lottie
+      <div onClick={() => setOpen(!open)}>
+        {/* <Lottie
           animationData={hamburgerAnimation}
           loop={false}
           lottieRef={lottieRef}
-        />
+        /> */}
+        <div>{SVGS.hamburger({className:'w-14 ',fill:'#fff'})}</div>
       </div>
       <div
         className={`${

@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import sampleImage from "@/app/assets/images/ref1.png";
-import { text } from "stream/consumers";
+import Image from "next/image";
+import { useState } from "react";
 import { Project } from "./Constants";
 
 type Props = {
