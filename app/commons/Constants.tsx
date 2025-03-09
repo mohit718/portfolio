@@ -64,6 +64,7 @@ export const media_links = {
 
 export const GITHUB_URL = "https://github.com/mohit718/";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const _projects_ref: Project[] = [
   {
     title: "Book Social Network",

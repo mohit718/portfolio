@@ -1,7 +1,6 @@
-import React from "react";
-import { SVGS } from "./SVGS";
 import Link from "next/link";
-import { links, media_links } from "./Constants";
+import { media_links } from "./Constants";
+import { SVGS } from "./SVGS";
 
 export const SocialMediaBar = () => {
   return (
