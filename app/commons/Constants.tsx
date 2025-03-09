@@ -7,10 +7,12 @@ import postgresSm from "@/app/assets/images/logos/postgres-sm.png";
 import react from "@/app/assets/images/logos/react.png";
 import spring from "@/app/assets/images/logos/spring.png";
 import tailwind from "@/app/assets/images/logos/tailwind.png";
-import ref2 from "@/app/assets/images/ref2.png";
+import bsn from "@/app/assets/images/work/bsn.png";
+import gamehub from "@/app/assets/images/work/gamehub.png";
+import tic_tac_toe from "@/app/assets/images/work/tic-tac-toe.png";
+import visualizer from "@/app/assets/images/work/visualizer.png";
+import ref from "@/app/assets/images/ref1.png";
 import { StaticImageData } from "next/image";
-
-
 
 export type Project = {
   title: string;
@@ -34,16 +36,40 @@ export const links = [
   { id: "home", href: "#home", label: "HOME" },
   { id: "about", href: "#about", label: "ABOUT" },
   { id: "experience", href: "#experience", label: "EXPERIENCE" },
-  { id: "work", href: "#work", label: "work" }
+  { id: "work", href: "#work", label: "work" },
 ];
 
+export const media_links = {
+  linkedin: {
+    href: "https://www.linkedin.com/in/mohitsoni98/",
+    label: "LinkedIn",
+  },
+  github: {
+    href: "https://github.com/mohit718/",
+    label: "GitHub",
+  },
+  twitter: {
+    href: "https://x.com/",
+    label: "Twitter",
+  },
+  youtube: {
+    href: "https://www.youtube.com/@mohit-1-8",
+    label: "Youtube",
+  },
+  instagram: {
+    href: "https://www.instagram.com/mohit.soni6922/",
+    label: "Instagram",
+  },
+};
 
-export const projects: Project[] = [
+export const GITHUB_URL = "https://github.com/mohit718/";
+
+const _projects_ref: Project[] = [
   {
     title: "Book Social Network",
     description:
       "Lets you rent books to your peers and add your own books for renting.",
-    image: ref2,
+    image: ref,
     technologies: [
       { label: "Spring Boot", image: spring },
       { label: "Angular", image: angular },
@@ -119,12 +145,71 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const projects: Project[] = [
+  {
+    title: "Book Social Network",
+    description:
+      "Lets you rent books to your peers and add your own books for renting.",
+    image: bsn,
+    technologies: [
+      { label: "Spring Boot", image: spring },
+      { label: "Angular", image: angular },
+      { label: "Bootstrap", image: bootstrap },
+      { label: "Postgres", image: postgresSm },
+    ],
+    links: {
+      live: "https://github.com/mohit718/book-social-network",
+      github: "https://github.com/mohit718/book-social-network",
+    },
+  },
+  {
+    title: "Algorithm Visualizer",
+    description:
+      "Visualize sorting algorithms to better understand its working.",
+    image: visualizer,
+    technologies: [
+      { label: "React", image: react },
+      { label: "Bootstrap", image: bootstrap },
+    ],
+    links: {
+      live: "https://ms18-sorting.netlify.app/",
+      github: "https://github.com/mohit718/Visualizer",
+    },
+  },
+  {
+    title: "Game Hub",
+    description: "Lets you download raw games for different platforms.",
+    image: gamehub,
+    technologies: [
+      { label: "React", image: react },
+      { label: "Chakra Ui", image: chakraui },
+    ],
+    links: {
+      live: "https://gamehub-ms18.vercel.app/",
+      github: "https://github.com/mohit718/game-hub",
+    },
+  },
+  {
+    title: "Tik-Tac-Toe",
+    description: "Classic Tic-Tac-Toe game for boring days.",
+    image: tic_tac_toe,
+    technologies: [
+      { label: "React", image: react },
+      { label: "Tailwind", image: tailwind },
+    ],
+    links: {
+      live: "https://github.com/mohit718/tic-tac-toe",
+      github: "https://github.com/mohit718/tic-tac-toe",
+    },
+  },
+];
 export const works: Work[] = [
   {
     title: "Full Stack Developer",
     subtitle: "Freelancing, Remote",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "<ul><li>Developed a secure and scalable mutual funds management platform using <strong>React.js</strong> and <strong>Spring Boot</strong>.</li><li>Designed intuitive dashboards for portfolio tracking, risk analysis, and investment insights.</li><li>Integrated secure APIs, data encryption, and financial compliance features.</li><li>Ensured optimal performance and code quality through effective testing and clean code practices.</li></ul>",
     year: "2023",
   },
   {

@@ -1,27 +1,29 @@
 import profileImage from "@/app/assets/images/profile.png";
-import techstack from "@/app/assets/images/tech_stack.png";
+import techstack_f from "@/app/assets/images/tech_stack_frontend.png";
+import techstack_b from "@/app/assets/images/tech_stack_backend.png";
+import techstack_o from "@/app/assets/images/tech_stack_other.png";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialMediaBar } from "./commons/SocialMediaBar";
 import { SVGS } from "./commons/SVGS";
 import { ProjectCard } from "./commons/ProjectCard";
 import { WorkCard } from "./commons/WorkCard";
-import { works, projects } from "./commons/Constants";
+import { works, projects, GITHUB_URL } from "./commons/Constants";
 
 export default function Home() {
   return (
     <>
       {/* Side Bar */}
-      <aside className="text left-0 flex min-h-screen w-full flex-col items-center justify-center gap-12 overflow-hidden p-2 text-center text-gray-400 md:gap-1 lg:fixed lg:w-1/3 lg:items-start lg:text-left xl:gap-8">
+      <aside className="text left-0 flex min-h-screen w-full flex-col items-center justify-center gap-12 overflow-hidden p-2 text-center text-gray-400 md:gap-1 lg:fixed lg:w-1/3 lg:items-start lg:pl-6 lg:text-left xl:gap-8">
         <div className="flex flex-col gap-6 md:gap-2 xl:gap-8">
           <div>
             <h6 className="mb-1 text-xl">
               Hello <span className="text-primary-600">I&apos;m</span>
             </h6>
-            <h1 className="animation-gradient mb-1 bg-clip-text font-monoton text-6xl text-[transparent] md:text-8xl lg:text-6xl">
+            <h1 className="animation-gradient bg-clip-text font-monoton text-[clamp(3rem,calc(3vw+1rem),4.25rem)] text-[transparent]">
               Mohit Soni
             </h1>
-            <h3 className="mb-6 text-3xl tracking-[3px] text-gray-300 md:tracking-[7px] lg:tracking-[5px]">
+            <h3 className="mb-6 text-[clamp(1.625rem,calc(1vw+1rem),3rem)] tracking-[1.75px] text-gray-300">
               Full Stack Developer
             </h3>
           </div>
@@ -89,7 +91,7 @@ export default function Home() {
           className="flex w-full flex-col items-start gap-4 px-4 lg:px-16"
         >
           <h2 className="my-4 mb-6 text-4xl font-bold">About</h2>
-          <p className="text-justify font-poppins text-lg leading-10 tracking-[3px] text-gray-400">
+          <p className="text-left font-poppins text-lg text-gray-400 tracking-[2px] leading-7 lg:leading-10 lg:tracking-[3px]">
             <span className="text-primary-500">3.5 years</span> of comprehensive
             work experience. Expertise in&nbsp;
             <span className="text-primary-500">
@@ -108,20 +110,52 @@ export default function Home() {
             &nbsp; and resolving complex technical issues.
           </p>
           <h3 className="mt-2 text-3xl font-bold">Tech Stack</h3>
-          <div className="rounded-3xl bg-primary-500 bg-opacity-40 p-2 backdrop-blur-md">
-            <Image className="" src={techstack} alt={"Tech Stack"} />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-1 items-stretch justify-center rounded-3xl bg-primary-500 bg-opacity-40 p-2 text-center backdrop-blur-md md:grid-cols-3">
+            <span className="text-gray-300 font-lg  pb-2 border-b lg:border-b-0">
+              Frontend
+              <Image
+                className="mt-2 mx-auto h-auto w-auto"
+                src={techstack_f}
+                alt={"Tech Stack"}
+              />
+            </span>
+            <span className="text-gray-300 font-lg  pb-2 border-b lg:border-b-0">
+              Backend
+              <Image
+                className="mt-2 mx-auto h-auto w-auto"
+                src={techstack_b}
+                alt={"Tech Stack"}
+              />
+            </span>
+            <span className="text-gray-300 font-lg pb-2 ">
+              Other Technologies
+              <Image
+                className="mt-2 mx-auto h-auto w-auto"
+                src={techstack_o}
+                alt={"Tech Stack"}
+              />
+            </span>
           </div>
         </section>
         {/* Experience Section */}
         <section id="experience" className="px-4 lg:px-16">
-          <h2 className="my-4 mb-6 text-left text-4xl font-bold">Experience</h2>
+          <h2 className="my-4 mb-6 text-left text-3xl lg:text-4xl font-bold">Experience</h2>
           {works.map((work, k) => (
             <WorkCard key={k} work={work} />
           ))}
         </section>
         {/* Project's Section */}
         <section id="work" className="w-full px-4 lg:px-16">
-          <h2 className="my-4 mb-6 text-4xl font-bold">Projects</h2>
+          <div className="flex items-center justify-between gap-1">
+            <h2 className="my-4 mb-6 text-3xl lg:text-4xl font-bold ">Featured Projects</h2>
+            <Link
+              href={GITHUB_URL}
+              target="_blank"
+              className="lg:text-lg underline whitespace-nowrap"
+            >
+              View All
+            </Link>
+          </div>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             {projects.map((project, k) => (
               <ProjectCard project={project} key={k} />
@@ -131,7 +165,7 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="hidden w-full flex-col items-center justify-center px-4 lg:flex lg:px-16"
+          className="hidden w-full flex-col items-center justify-center px-4  lg:px-16"
         >
           <h1 className="animation-gradient bg-clip-text text-5xl font-bold text-[transparent]">
             Feel Free To Connect.

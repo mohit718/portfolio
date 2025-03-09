@@ -20,12 +20,12 @@ export const WorkCard = ({ work }: Props) => {
           ></div>
         </div>
         <div className="mt-1">
-          <h3 className="text-3xl font-medium text-gray-200">{work.title}</h3>
+          <h3 className="text-[clamp(26px,calc(1vw+1rem),30px)] font-medium text-gray-200">{work.title}</h3>
           <h4 className="text-xl font-light tracking-[1.5px]">
             {work.subtitle}
           </h4>
           <p
-            className="text-md description mt-2 leading-6 text-gray-400"
+            className="text-md description mt-2 leading-6 text-gray-400 hidden lg:block"
             dangerouslySetInnerHTML={{ __html: work.description || "" }}
           ></p>
         </div>

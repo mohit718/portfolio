@@ -3,6 +3,8 @@ import sampleImage from "@/app/assets/images/ref1.png";
 import Image from "next/image";
 import { useState } from "react";
 import { Project } from "./Constants";
+import Link from "next/link";
+import { SVGS } from "./SVGS";
 
 type Props = {
   project: Project;
@@ -11,57 +13,76 @@ export const ProjectCard = ({ project }: Props) => {
   const [active, setActive] = useState<0 | 1>(0);
   return (
     <div
-      className="h-[30rem] text-center bg-primary-500 bg-opacity-15 rounded-2xl overflow-hidden relative"
+      className="relative h-[30rem] overflow-hidden rounded-2xl bg-primary-500 bg-opacity-15 text-center"
       onMouseEnter={() => setActive(1)}
       onMouseLeave={() => setActive(0)}
     >
-      <div className="absolute right-0 top-1/2 z-30  transition-all">
+      <div className="absolute right-0 top-1/2 z-30 transition-all">
         <div
           className={`${
             active == 0 && "bg-gray-200"
-          } border-gray-200 border w-3 h-3 rounded-full mr-1 mb-1 duration-300`}
+          } mb-1 mr-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
         ></div>
         <div
           className={`${
             active == 1 && "bg-gray-200"
-          } border-gray-200 border w-3 h-3 rounded-full mr-1 mt-1 duration-300`}
+          } mr-1 mt-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
         ></div>
       </div>
-      <div className="w-full h-[6rem] p-2 bg-primary-500 bg-opacity-15 backdrop-blur-2xl overflow-hidden absolute top-0 z-40">
-        <h3 className="font-bold text-2xl tracking-[1px] mb-1">
+      <div className="absolute top-0 z-40 h-[6rem] w-full overflow-hidden bg-primary-800/60 p-2 backdrop-blur-2xl">
+        <h3 className="mb-1 text-2xl font-bold tracking-[1px]">
           {project.title}
         </h3>
-        <h6 className="text-gray-400 text-sm">{project.description}</h6>
+        <h6 className="text-sm text-gray-400">{project.description}</h6>
       </div>
-      <div className="hover:translate-y-[-55%]  transition-transform duration-500 h-[44rem] overflow-hidden absolute top-[6rem] z-30 ">
-        <div className={`h-[24rem] overflow-hidden z-20`}>
+      <div className="absolute top-[6rem] z-30 h-[44rem] overflow-hidden text-left transition-transform duration-500 hover:translate-y-[-55%]">
+        <div className={`z-20 h-[24rem] overflow-hidden`}>
           <Image
             src={project.image || sampleImage}
             alt={project.title}
-            className="object-cover object-top h-full"
+            className="h-full object-cover object-left-top"
           />
         </div>
-        <div className={`h-[24rem] overflow-hidden p-4 z-20`}>
-          <h4 className="text-lg mb-4 font-semibold text-gray-400">
-            Technologies Used
-          </h4>
-          <ul>
-            {project.technologies.map((tech, k) => (
-              <li
-                key={k}
-                className="grid grid-cols-2 items-center justify-center text-left"
+        <div className={`z-20 h-[24rem] overflow-hidden p-4`}>
+          <div className="flex flex-col gap-3">
+            <h4 className="text-lg font-semibold text-gray-400">
+              Technologies Used
+            </h4>
+            <ul className="flex flex-col gap-3">
+              {project.technologies.map((tech, k) => (
+                <li key={k} className="flex items-center gap-4">
+                  <Image
+                    src={tech.image}
+                    alt={tech.label}
+                    className="h-auto w-10 object-contain"
+                  />
+                  <h5 className="font-semibold text-gray-200">
+                    {tech.label}
+                  </h5>
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-stretch justify-stretch gap-2 my-4">
+              {project.links.live && (
+                <Link
+                  href={project.links.live}
+                  className="w-full rounded-lg bg-gray-400/30 p-1 px-3 text-gray-300 hover:text-gray-100"
+                >
+                  {SVGS.link({ className: "w-6 h-6 inline mx-1" })}
+                  {"Live Link"}
+                </Link>
+              )}
+              {project.links.github && (
+              <Link
+                href={project.links.github}
+                className="w-full rounded-lg bg-gray-400/30 p-1 px-2 text-gray-300 hover:text-gray-100"
               >
-                <Image
-                  src={tech.image}
-                  alt={tech.label}
-                  className="h-12 w-auto object-contain"
-                />
-                <h5 className="text-lg font-bold text-gray-200">
-                  {tech.label}
-                </h5>
-              </li>
-            ))}
-          </ul>
+                {SVGS.github({ className: "w-6 h-6 inline mx-1" })}
+                {"Source Code"}
+              </Link>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
