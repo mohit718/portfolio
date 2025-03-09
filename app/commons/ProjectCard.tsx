@@ -17,18 +17,6 @@ export const ProjectCard = ({ project }: Props) => {
       onMouseEnter={() => setActive(1)}
       onMouseLeave={() => setActive(0)}
     >
-      <div className="absolute right-0 top-1/2 z-30 transition-all">
-        <div
-          className={`${
-            active == 0 && "bg-gray-200"
-          } mb-1 mr-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
-        ></div>
-        <div
-          className={`${
-            active == 1 && "bg-gray-200"
-          } mr-1 mt-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
-        ></div>
-      </div>
       <div className="absolute top-0 z-40 h-[6rem] w-full overflow-hidden bg-primary-800/60 p-2 backdrop-blur-2xl">
         <h3 className="mb-1 text-2xl font-bold tracking-[1px]">
           {project.title}
@@ -56,34 +44,44 @@ export const ProjectCard = ({ project }: Props) => {
                     alt={tech.label}
                     className="h-auto w-10 object-contain"
                   />
-                  <h5 className="font-semibold text-gray-200">
-                    {tech.label}
-                  </h5>
+                  <h5 className="font-semibold text-gray-200">{tech.label}</h5>
                 </li>
               ))}
             </ul>
-            <div className="flex items-stretch justify-stretch gap-2 my-4">
+            <div className="my-4 flex items-stretch justify-stretch gap-2 text-sm font-semibold">
               {project.links.live && (
                 <Link
                   href={project.links.live}
-                  className="w-full rounded-lg bg-gray-400/30 p-1 px-3 text-gray-300 hover:text-gray-100"
+                  className="w-full whitespace-nowrap rounded-lg bg-gray-400/30 p-1 px-3 text-gray-300 hover:text-gray-100"
                 >
                   {SVGS.link({ className: "w-6 h-6 inline mx-1" })}
                   {"Live Link"}
                 </Link>
               )}
               {project.links.github && (
-              <Link
-                href={project.links.github}
-                className="w-full rounded-lg bg-gray-400/30 p-1 px-2 text-gray-300 hover:text-gray-100"
-              >
-                {SVGS.github({ className: "w-6 h-6 inline mx-1" })}
-                {"Source Code"}
-              </Link>
+                <Link
+                  href={project.links.github}
+                  className="w-full whitespace-nowrap rounded-lg bg-gray-400/30 p-1 px-2 text-gray-300 hover:text-gray-100"
+                >
+                  {SVGS.github({ className: "w-6 h-6 inline mx-1" })}
+                  {"Source Code"}
+                </Link>
               )}
             </div>
           </div>
         </div>
+      </div>
+      <div className="absolute right-0 top-1/2 z-30 transition-all">
+        <div
+          className={`${
+            active == 0 && "bg-gray-200"
+          } mb-1 mr-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
+        ></div>
+        <div
+          className={`${
+            active == 1 && "bg-gray-200"
+          } mr-1 mt-1 h-3 w-3 rounded-full border border-gray-200 duration-300`}
+        ></div>
       </div>
     </div>
   );

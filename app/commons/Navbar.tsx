@@ -19,7 +19,7 @@ export const Navbar = () => {
           loop={false}
           lottieRef={lottieRef}
         /> */}
-        <div>{SVGS.hamburger({className:'w-10 lg:w-14',fill:'#fff'})}</div>
+        <div>{SVGS.hamburger({className:'w-10 lg:w-14 mt-[-20px]',fill:'#fff'})}</div>
       </div>
       <div
         className={`${
