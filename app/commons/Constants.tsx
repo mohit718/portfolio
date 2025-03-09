@@ -11,6 +11,8 @@ import bsn from "@/app/assets/images/work/bsn.png";
 import gamehub from "@/app/assets/images/work/gamehub.png";
 import tic_tac_toe from "@/app/assets/images/work/tic-tac-toe.png";
 import visualizer from "@/app/assets/images/work/visualizer.png";
+import chess from "@/app/assets/images/work/chess.png";
+import expense from "@/app/assets/images/work/expense.png";
 import ref from "@/app/assets/images/ref1.png";
 import { StaticImageData } from "next/image";
 
@@ -165,6 +167,21 @@ export const projects: Project[] = [
     },
   },
   {
+    title: "Multiplayer Chess",
+    description:
+      "Multiplayer chess game, lets you connect with your friend online and play.",
+    image: chess,
+    technologies: [
+      { label: "React", image: react },
+      { label: "Tailwind", image: tailwind },
+      { label: "NodeJs", image: nodejs },
+    ],
+    links: {
+      live: "https://github.com/mohit718/chess",
+      github: "https://github.com/mohit718/chess",
+    },
+  },
+  {
     title: "Algorithm Visualizer",
     description:
       "Visualize sorting algorithms to better understand its working.",
@@ -176,6 +193,20 @@ export const projects: Project[] = [
     links: {
       live: "https://ms18-sorting.netlify.app/",
       github: "https://github.com/mohit718/Visualizer",
+    },
+  },
+  {
+    title: "Expense Tracker",
+    description:
+      "Application designed to help you manage your finances efficiently.",
+    image: expense,
+    technologies: [
+      { label: "React", image: react },
+      { label: "Tailwind", image: tailwind }
+    ],
+    links: {
+      live: "https://github.com/mohit718/expense-tracker",
+      github: "https://github.com/mohit718/expense-tracker",
     },
   },
   {

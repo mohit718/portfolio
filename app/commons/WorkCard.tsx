@@ -20,8 +20,8 @@ export const WorkCard = ({ work }: Props) => {
           ></div>
         </div>
         <div className="mt-1">
-          <h3 className="text-[clamp(26px,calc(1vw+1rem),30px)] font-medium text-gray-200">{work.title}</h3>
-          <h4 className="text-xl font-light tracking-[1.5px]">
+          <h3 className="text-[clamp(20px,calc(1vw+1rem),30px)] font-medium text-gray-200">{work.title}</h3>
+          <h4 className="text-[clamp(14px,calc(1vw+0.75rem),20px)] font-light tracking-[1.5px]">
             {work.subtitle}
           </h4>
           <p

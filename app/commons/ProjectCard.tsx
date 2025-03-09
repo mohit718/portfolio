@@ -18,10 +18,12 @@ export const ProjectCard = ({ project }: Props) => {
       onMouseLeave={() => setActive(0)}
     >
       <div className="absolute top-0 z-40 h-[6rem] w-full overflow-hidden bg-primary-800/60 p-2 backdrop-blur-2xl">
-        <h3 className="mb-1 text-2xl font-bold tracking-[1px]">
+        <h3 className="mb-1 text-[clamp(20px,calc(1vw+1rem),26px)] font-bold tracking-[1px]">
           {project.title}
         </h3>
-        <h6 className="text-sm text-gray-400">{project.description}</h6>
+        <h6 className="text-sm text-gray-400">
+          {project.description}
+        </h6>
       </div>
       <div className="absolute top-[6rem] z-30 h-[44rem] overflow-hidden text-left transition-transform duration-500 hover:translate-y-[-55%]">
         <div className={`z-20 h-[24rem] overflow-hidden`}>
@@ -52,6 +54,7 @@ export const ProjectCard = ({ project }: Props) => {
               {project.links.live && (
                 <Link
                   href={project.links.live}
+                  target="_blank"
                   className="w-full whitespace-nowrap rounded-lg bg-gray-400/30 p-1 px-3 text-gray-300 hover:text-gray-100"
                 >
                   {SVGS.link({ className: "w-6 h-6 inline mx-1" })}
@@ -61,6 +64,7 @@ export const ProjectCard = ({ project }: Props) => {
               {project.links.github && (
                 <Link
                   href={project.links.github}
+                  target="_blank"
                   className="w-full whitespace-nowrap rounded-lg bg-gray-400/30 p-1 px-2 text-gray-300 hover:text-gray-100"
                 >
                   {SVGS.github({ className: "w-6 h-6 inline mx-1" })}
