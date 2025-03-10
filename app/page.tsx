@@ -54,28 +54,28 @@ export default function Home() {
           </div>
           <div>
             <h6 className="mb-2 text-lg font-semibold">OR REACH OUT</h6>
-            <div className="group mb-2 flex items-center justify-center gap-4 text-center lg:justify-start lg:text-left">
-              <div className="rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
+            <div className="group mb-1 flex items-center justify-center gap-4 text-center lg:justify-start lg:text-left">
+              <div className="hidden lg:block rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
                 {SVGS.email({ width: "40px", height: "40px" })}
               </div>
-              <p className="text-lg font-medium tracking-[1px] group-hover:text-gray-200 xl:tracking-[5px]">
+              <p className="text-lg font-medium tracking-[2px] group-hover:text-gray-200">
                 mohit18.official@gmail.com
               </p>
             </div>
             <div className="group mb-2 flex items-center justify-center gap-4 lg:justify-start">
-              <div className="rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
+              <div className="hidden lg:block rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
                 {SVGS.telephone({ width: "40px", height: "40px" })}
               </div>
-              <p className="text-lg font-medium tracking-[1px] group-hover:text-gray-200 xl:tracking-[5px]">
+              <p className="text-lg font-medium tracking-[3px] group-hover:text-gray-200">
                 +91 977-3654-718
               </p>
             </div>
           </div>
         </div>
       </aside>
-      <main className="absolute right-0 flex w-full flex-col items-end justify-center gap-y-8 py-3 lg:w-2/3">
+      <main className="absolute right-0 flex w-full flex-col justify-center gap-y-8 py-3 lg:w-2/3">
         {/* My Image */}
-        <header id="home" className="hidden overflow-hidden lg:block">
+        <header id="home" className="hidden overflow-hidden lg:block self-center">
           <div className="overflow-hidden">
             <Image
               priority

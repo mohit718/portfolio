@@ -30,7 +30,7 @@ export type Project = {
 export type Work = {
   title: string;
   subtitle: string;
-  description?: string;
+  description?: string[];
   year: string;
 };
 
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     image: expense,
     technologies: [
       { label: "React", image: react },
-      { label: "Tailwind", image: tailwind }
+      { label: "Tailwind", image: tailwind },
     ],
     links: {
       live: "https://github.com/mohit718/expense-tracker",
@@ -240,22 +240,32 @@ export const works: Work[] = [
   {
     title: "Full Stack Developer",
     subtitle: "Freelancing, Remote",
-    description:
-      "<ul><li>Developed a secure and scalable mutual funds management platform using <strong>React.js</strong> and <strong>Spring Boot</strong>.</li><li>Designed intuitive dashboards for portfolio tracking, risk analysis, and investment insights.</li><li>Integrated secure APIs, data encryption, and financial compliance features.</li><li>Ensured optimal performance and code quality through effective testing and clean code practices.</li></ul>",
+    description: [
+      "Developed a secure and scalable mutual funds management platform for the client.",
+      "Designed intuitive dashboards for portfolio tracking, risk analysis, and investment insights.",
+      "Integrated secure APIs, data encryption, and financial compliance features.",
+      "Ensured optimal performance and code quality through effective testing and clean code practices.",
+    ],
     year: "2023",
   },
   {
     title: "Operations Manager",
     subtitle: "The Sparkles Play School, Faridabad",
-    description:
-      "<ul><li>Produced SOPs to document workplace procedures and optimize productivity through standardization.</li><li>Delegated work to staff, setting priorities and goals, also provided guidance and training to the staff for better management.</li><li>Improved morale and management communication by creating employee recognition and rewards practices.</li></ul>",
+    description: [
+      "Produced SOPs to document workplace procedures and optimize productivity through standardization.",
+      "Delegated work to staff, provided guidance and training to the staff for better management.",
+      "Improved morale and management communication by creating employee recognition and rewards practices.",
+    ],
     year: "2023",
   },
   {
     title: "Specialist Programmer",
     subtitle: "Infosys Limited, Pune",
-    description:
-      "<ul><li>Designed and developed a comprehensive policy management solution for an insurance company from the ground up. </li><li>Integrated a payment gateway to facilitate paperless transactions, and enable seamless updates to policies, vehicles, and more directly through the portal. </li><li>Gained expertise in clean code architecture, implemented complex business features using Angular, and ensured robust functionality by creating unit tests for all features, with over 80% code coverage.</li></ul>",
+    description: [
+      "Designed and developed a comprehensive policy management solution for the client from scratch.",
+      "Integrated a payment gateway to facilitate paperless transactions, and enable seamless updates to policies, vehicles, and more directly through the portal.",
+      "Gained expertise in clean code architecture, implemented complex business features using Angular, and ensured robust functionality by creating unit tests for all features, with over 80% code coverage.",
+    ],
     year: "2021",
   },
 ];
