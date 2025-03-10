@@ -231,7 +231,7 @@ export const projects: Project[] = [
       { label: "Tailwind", image: tailwind },
     ],
     links: {
-      live: "https://github.com/mohit718/tic-tac-toe",
+      live: "https://tictactoe-ms18.vercel.app/",
       github: "https://github.com/mohit718/tic-tac-toe",
     },
   },
