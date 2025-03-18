@@ -136,7 +136,7 @@ const _projects_ref: Project[] = [
     },
   },
   {
-    title: "Tik-Tac-Toe",
+    title: "Tic-Tac-Toe",
     description: "Classic Tic-Tac-Toe game for boring days.",
     technologies: [
       { label: "React", image: react },
