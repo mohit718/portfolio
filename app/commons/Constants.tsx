@@ -239,22 +239,11 @@ export const projects: Project[] = [
 export const works: Work[] = [
   {
     title: "Full Stack Developer",
-    subtitle: "Freelancing, Remote",
+    subtitle: "Rovae, Remote",
     description: [
-      "Developed a secure and scalable mutual funds management platform for the client.",
-      "Designed intuitive dashboards for portfolio tracking, risk analysis, and investment insights.",
-      "Integrated secure APIs, data encryption, and financial compliance features.",
-      "Ensured optimal performance and code quality through effective testing and clean code practices.",
-    ],
-    year: "2023",
-  },
-  {
-    title: "Operations Manager",
-    subtitle: "The Sparkles Play School, Faridabad",
-    description: [
-      "Produced SOPs to document workplace procedures and optimize productivity through standardization.",
-      "Delegated work to staff, provided guidance and training to the staff for better management.",
-      "Improved morale and management communication by creating employee recognition and rewards practices.",
+      "Developed a Mutual Funds Investment Platform using Next.js to enable seamless portfolio management. Built interactive dashboards using Tailwind(Shadcn). Optimized performance using server-side rendering (SSR) in Next.js enhancing user experience by 25%.",
+      "Created a HR system for schools using Next.js (frontend) and Express.js (API services). Designed modules for attendance, payroll, and admin dashboard. Used MongoDB for flexible data storage and implemented role-based access control (RBAC). Reduced manual workload by 30% through automated reporting.",
+      "Built an Inventory Management System with Next.js. Integrated barcode scanning and automated reorder alerts, cutting supply discrepancies by 40%. Deployed analytics dashboards for procurement teams. Delivered the project on time, showcasing efficient Agile execution and attention to detail.",
     ],
     year: "2023",
   },

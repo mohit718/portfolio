@@ -55,7 +55,7 @@ export default function Home() {
           <div>
             <h6 className="mb-2 text-lg font-semibold">OR REACH OUT</h6>
             <div className="group mb-1 flex items-center justify-center gap-4 text-center lg:justify-start lg:text-left">
-              <div className="hidden lg:block rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
+              <div className="hidden rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px] lg:block">
                 {SVGS.email({ width: "40px", height: "40px" })}
               </div>
               <p className="text-lg font-medium tracking-[2px] group-hover:text-gray-200">
@@ -63,7 +63,7 @@ export default function Home() {
               </p>
             </div>
             <div className="group mb-2 flex items-center justify-center gap-4 lg:justify-start">
-              <div className="hidden lg:block rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px]">
+              <div className="hidden rounded-full shadow-primary-500 group-hover:shadow-[0_0_10px_1.5px] lg:block">
                 {SVGS.telephone({ width: "40px", height: "40px" })}
               </div>
               <p className="text-lg font-medium tracking-[3px] group-hover:text-gray-200">
@@ -75,7 +75,10 @@ export default function Home() {
       </aside>
       <main className="absolute right-0 flex w-full flex-col justify-center gap-y-8 py-3 lg:w-2/3">
         {/* My Image */}
-        <header id="home" className="hidden overflow-hidden lg:block self-center">
+        <header
+          id="home"
+          className="hidden self-center overflow-hidden lg:block"
+        >
           <div className="overflow-hidden">
             <Image
               priority
@@ -91,11 +94,13 @@ export default function Home() {
           className="flex w-full flex-col items-start gap-4 px-4 lg:px-16"
         >
           <h2 className="my-4 mb-6 text-4xl font-bold">About</h2>
-          <p className="text-left font-poppins text-lg text-gray-400 tracking-[2px] leading-7 lg:leading-10 lg:tracking-[3px]">
-            <span className="text-primary-500">3.5 years</span> of comprehensive
-            work experience. Expertise in&nbsp;
+          <p className="text-left font-poppins text-lg leading-7 tracking-[2px] text-gray-400 lg:leading-10 lg:tracking-[3px]">
+            <span className="text-primary-500">4+ years</span> of work
+            experience in{" "}
+            <span className="text-primary-500">Javascript/Typescript</span>{" "}
+            based frameworks like &nbsp;
             <span className="text-primary-500">
-              React.js & Java Spring Boot framework
+              NextJs, ReactJs & ExpressJs
             </span>
             . Passionate about coding since the&nbsp;
             <span className="text-primary-500">age of 15</span>, I bring
@@ -110,27 +115,27 @@ export default function Home() {
             &nbsp; and resolving complex technical issues.
           </p>
           <h3 className="mt-2 text-3xl font-bold">Tech Stack</h3>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-1 items-stretch justify-center rounded-3xl bg-primary-500 bg-opacity-40 p-2 text-center backdrop-blur-md md:grid-cols-3">
-            <span className="text-gray-300 font-lg  pb-2 border-b lg:border-b-0">
+          <div className="grid grid-cols-1 items-stretch justify-center gap-x-8 gap-y-1 rounded-3xl bg-primary-500 bg-opacity-40 p-2 text-center backdrop-blur-md md:grid-cols-3">
+            <span className="font-lg border-b pb-2 text-gray-300 lg:border-b-0">
               Frontend
               <Image
-                className="mt-2 mx-auto h-auto w-auto"
+                className="mx-auto mt-2 h-auto w-auto"
                 src={techstack_f}
                 alt={"Tech Stack"}
               />
             </span>
-            <span className="text-gray-300 font-lg  pb-2 border-b lg:border-b-0">
+            <span className="font-lg border-b pb-2 text-gray-300 lg:border-b-0">
               Backend
               <Image
-                className="mt-2 mx-auto h-auto w-auto"
+                className="mx-auto mt-2 h-auto w-auto"
                 src={techstack_b}
                 alt={"Tech Stack"}
               />
             </span>
-            <span className="text-gray-300 font-lg pb-2 ">
+            <span className="font-lg pb-2 text-gray-300">
               Other Technologies
               <Image
-                className="mt-2 mx-auto h-auto w-auto"
+                className="mx-auto mt-2 h-auto w-auto"
                 src={techstack_o}
                 alt={"Tech Stack"}
               />
@@ -139,7 +144,9 @@ export default function Home() {
         </section>
         {/* Experience Section */}
         <section id="experience" className="px-4 lg:px-16">
-          <h2 className="my-4 mb-6 text-left text-3xl lg:text-4xl font-bold">Experience</h2>
+          <h2 className="my-4 mb-6 text-left text-3xl font-bold lg:text-4xl">
+            Experience
+          </h2>
           {works.map((work, k) => (
             <WorkCard key={k} work={work} />
           ))}
@@ -147,11 +154,13 @@ export default function Home() {
         {/* Project's Section */}
         <section id="work" className="w-full px-4 lg:px-16">
           <div className="flex items-center justify-between gap-1">
-            <h2 className="my-4 mb-6 text-3xl lg:text-4xl font-bold ">Featured Projects</h2>
+            <h2 className="my-4 mb-6 text-3xl font-bold lg:text-4xl">
+              Featured Projects
+            </h2>
             <Link
               href={GITHUB_URL}
               target="_blank"
-              className="lg:text-lg underline whitespace-nowrap"
+              className="whitespace-nowrap underline lg:text-lg"
             >
               View All
             </Link>
@@ -165,7 +174,7 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="hidden w-full flex-col items-center justify-center px-4  lg:px-16"
+          className="hidden w-full flex-col items-center justify-center px-4 lg:px-16"
         >
           <h1 className="animation-gradient bg-clip-text text-5xl font-bold text-[transparent]">
             Feel Free To Connect.
