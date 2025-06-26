@@ -241,7 +241,7 @@ export const works: Work[] = [
     title: "Full Stack Developer",
     subtitle: "Rovae, Remote",
     description: [
-      "Created a HR system for schools using Next.js (frontend) and Express.js (API services). Designed modules for attendance, payroll, and admin dashboard. Used MongoDB for flexible data storage and implemented role-based access control (RBAC). Reduced manual workload by 30% through automated reporting.",
+      "Created a HR system for schools using Next.js (frontend) and  Supabase (API & Database). Designed modules for attendance, payroll, and admin dashboard. Implemented role-based access control (RBAC) to prevent Access Control vulnerabilites. Reduced manual workload by 30% through automated reporting.",
       "Built an Inventory Management System with Next.js. Integrated barcode scanning and automated reorder alerts, cutting supply discrepancies by 40%. Deployed analytics dashboards for procurement teams. Delivered the project on time, showcasing efficient Agile execution and attention to detail.",
     ],
     year: "2023",
