@@ -28,7 +28,7 @@ export default function Home() {
             </h3>
           </div>
           <div className="flex justify-center gap-2 lg:justify-start">
-            <Link
+            {/* <Link
               href={"/cv.pdf"}
               download={"CV"}
               target={"_blank"}
@@ -36,7 +36,7 @@ export default function Home() {
               className="mb-8 rounded-full bg-primary-700 p-4 font-medium text-gray-300 transition-colors hover:bg-primary-600"
             >
               Download CV
-            </Link>
+            </Link> */}
             <Link
               href={"#work"}
               className="mb-8 rounded-full border border-primary-700 p-4 font-medium text-gray-300 transition-colors hover:bg-primary-600"
